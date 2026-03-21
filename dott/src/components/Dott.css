@@ -143,4 +143,42 @@ table input {
 	height: 20px;
 	border-radius: 50%;
 	border: 1px solid rgba(255, 255, 255, 0.2);
+	overflow-x: hidden;
+}
+@media (max-width: 390px) {
+	.dott {
+		padding: 1em;
+	}
+	
+	.dott h1 {
+		font-size: 2em;
+	}
+	
+	.add-player {
+		flex-direction: column;
+		box-sizing: border-box;
+	}
+	
+	.add-player input {
+		width: 100%;
+		box-sizing: border-box;
+	}
+	
+	.add-player button {
+		width: 100%;
+		box-sizing: border-box;
+	}
+	
+	table {
+		width: 100%;
+		font-size: 0.8em;
+	}
+	
+	table th, table td {
+		padding: 0.5em;
+	}
+	
+	table input {
+		width: 60px;
+	}
 }
