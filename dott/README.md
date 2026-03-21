@@ -1,18 +1,16 @@
-# React + Vite
+# DotCard Game 🃏
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+En digital poängtavla för kortspelet DotCard, byggd med React.
 
-Currently, two official plugins are available:
+## Om spelet
+DotCard är ett familjekortspel där spelarna spelar 10 rundor (9 ner till 0).
+Varje runda räknas poängen ihop baserat på korten som är kvar i handen.
+Den spelaren med **lägst totalpoäng** när alla rundor är spelade vinner!
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
-
-Note: This will impact Vite dev & build performances.
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Funktioner
+- ➕ Lägg till valfritt antal spelare
+- 🎯 Skriv in poäng per runda
+- 🔢 Automatisk poängräkning
+- 🔵 Visuell runda-indikator med färgade prickar
+- 🏆 Vinnare visas automatiskt när spelet är slut
+- 🔄 Starta om spelet med en knapp
