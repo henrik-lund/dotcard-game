@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
+body{
+	background: linear-gradient(135deg, #0a1628, #1a0a0a);
+}
+.dott {
+	min-height: 100vh;
+	color: gold;
+	font-family: 'Cinzel', serif;
+	padding: 2em;
+	text-align: center;
+}
+
+.dott h1 {
+	font-size: 3em;
+	color: gold;
+	text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+	border-bottom: 2px solid gold;
+	padding-bottom: 0.3em;
+	margin-bottom: 0.5em;
+}
+
+.dott h2 {
+	font-size: 1.5em;
+	color: #c8a000;
+	margin-bottom: 1em;
+}
+
+.add-player {
+	display: flex;
+	justify-content: center;
+	gap: 0.5em;
+	margin-bottom: 2em;
+}
+
+.add-player input {
+	padding: 0.5em 1em;
+	border-radius: 5px;
+	border: 2px solid gold;
+	background-color: #1a1a2e;
+	color: gold;
+	font-family: 'Cinzel', serif;
+	font-size: 1em;
+}
+
+.add-player input::placeholder {
+	color: #a08000;
+}
+
+.add-player button {
+	padding: 0.5em 1.5em;
+	background: linear-gradient(180deg, #c8a000, #8b6500);
+	color: #1a0a0a;
+	border: none;
+	border-radius: 5px;
+	font-family: 'Cinzel', serif;
+	font-weight: bold;
+	cursor: pointer;
+	
+	&:hover {
+		background-color: linear-gradient(180deg, #ffd700, #c8a000);
+	}
+}
+
+table {
+	width: 80%;
+	margin: 0 auto 2em auto;
+	border-collapse: collapse;
+}
+
+table th {
+	background: linear-gradient(180deg, #8b0000, #5a0000);
+	color: gold;
+	padding: 0.8em 1em;
+	border: 1px solid gold;
+	font-size: 1em;
+}
+
+table td {
+	padding: 0.8em 1em;
+	border: 1px solid #8b6500;
+	background-color: #0d1b2a;
+	color: gold;
+}
+
+table tr:nth-child(even) td {
+	background-color: #1a2a3a;
+}
+
+table input {
+	background-color: #1a1a2e;
+	border: 1px solid gold;
+	color: gold;
+	padding: 0.3em 0.5em;
+	border-radius: 4px;
+	font-family: 'Cinzel', serif;
+	width: 80px;
+	text-align: center;
+}
+
+.dott button {
+	padding: 0.7em 2em;
+	background: linear-gradient(180deg, #8b0000, #5a0000);
+	color: gold;
+	border: 2px solid gold;
+	border-radius: 5px;
+	font-family: 'Cinzel', serif;
+	font-weight: bold;
+	font-size: 1em;
+	cursor: pointer;
+	margin-top: 1em;
+	
+	&:hover {
+		background-color: linear-gradient(180deg, #c00000, #8b0000);
+	}
+}
+
+.winner {
+	background: linear-gradient(135deg, #1a0a0a, #0a1628);
+	border: 3px solid gold;
+	border-radius: 15px;
+	padding: 2em;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.winner h2 {
+	font-size: 2em;
+	color: gold;
+	text-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
+}
+.round-indicator {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 6px;
+	max-width: 150px;
+	margin: 0 auto 1em auto;
+}
+
+.dot {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+}
