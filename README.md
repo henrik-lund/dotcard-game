@@ -14,3 +14,4 @@ Den spelaren med **lägst totalpoäng** när alla rundor är spelade vinner!
 - 🔵 Visuell runda-indikator med färgade prickar
 - 🏆 Vinnare visas automatiskt när spelet är slut
 - 🔄 Starta om spelet med en knapp
+https://henrik-lund.github.io/dotcard-game/
