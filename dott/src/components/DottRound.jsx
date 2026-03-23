@@ -15,7 +15,8 @@ function DottRound ({ players, roundInputs, handleScoreInput, confirmRound}) {
 					<tr key={index}>
 						<td>{player.name}</td>
 						<td>
-							<input type="number"
+							<input type="text"
+							inputMode="numeric"
 							value={roundInputs[player.name] || ''}
 							onChange={(e) => handleScoreInput(player.name, e.target.value)} />
 						</td>
