@@ -1,6 +1,7 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import DottRound from "./DottRound"
 import DottRoundIndicator from "./DottRoundIndicator"
+import confetti from 'canvas-confetti'
 import './Dott.css'
 
 function Dott() {
@@ -34,12 +35,41 @@ function Dott() {
 	
 	const getWinner = () => {
 		if (players.length === 0) return null
-		return players.reduce((lowest, player) => 
+		return players.reduce((lowest, player) =>
 			player.total < lowest.total ? player : lowest
 	)
 }
 
 const winner = round < 0 ? getWinner() : null
+
+useEffect(() => {
+	if (winner) {
+		const duration = 3000
+		const end = Date.now() + duration
+		
+		const frame = () => {
+			confetti({
+				particleCount: 5,
+				angle: 60,
+				spread: 55,
+				origin: { x: 0 },
+				colors: ['#FFD700', '#8b0000', '#ffffff']
+			})
+			confetti({
+				particleCount: 5,
+				angle: 120,
+				spread: 55,
+				origin: { x: 1 },
+				colors: ['#FFD700', '#8b0000', '#ffffff']
+			})
+			
+			if (Date.now() < end) {
+				requestAnimationFrame(frame)
+			}
+		}
+		frame()
+	}
+}, [winner])
 
 return (
 	<div className="dott">
