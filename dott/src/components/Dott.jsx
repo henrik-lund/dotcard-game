@@ -85,18 +85,18 @@ if (!gameStarted) {
 
 return (
 	<div className="dott">
-	<h1>Dot 🃏</h1>
+		<h1>Dot 🃏</h1>
 	{winner ? (
 		<div className="winner">
-		<h2>🏆 {winner.name} vinner med {winner.total} poäng!</h2>
-		<table>
-		<thead>
-		<tr>
-		<th>Spelare</th>
-		<th>Total poäng</th>
-		</tr>
-		</thead>
-		<tbody>
+			<h2>🏆 {winner.name} vinner med {winner.total} poäng!</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>Spelare</th>
+						<th>Total poäng</th>
+					</tr>
+				</thead>
+			<tbody>
 		{players
 			.sort((a, b) => a.total - b.total)
 			.map((player, index) => (

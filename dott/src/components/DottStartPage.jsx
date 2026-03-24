@@ -22,7 +22,7 @@ function DottStartPage({ onStart }) {
 		<div className="add-player">
 		<input
 		type="text"
-		placeholder="Spelarnamn..."
+		placeholder="Spelare..."
 		value={inputName}
 		onChange={(e) => setInputName(e.target.value)}
 		onKeyDown={handleKeyDown}
