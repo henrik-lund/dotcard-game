@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import DottRound from "./DottRound"
 import DottRoundIndicator from "./DottRoundIndicator"
 import confetti from 'canvas-confetti'
+import DottStartPage from "./DottStartPage"
 import './Dott.css'
 
 function Dott() {
@@ -9,6 +10,12 @@ function Dott() {
 	const [inputName, setInputName] = useState('')
 	const [round, setRound] = useState(9)
 	const [roundInputs, setRoundInputs] = useState({})
+	const [gameStarted, setGameStarted] = useState(false)  // NY
+	
+	const handleStart = (playerNames) => {  // NY
+		setPlayers(playerNames.map(name => ({ name, scores: [], total: 0 })))
+		setGameStarted(true)
+	}
 	
 	const addPlayer = () => {
 		if (inputName.trim() === '') return
@@ -71,10 +78,14 @@ useEffect(() => {
 	}
 }, [winner])
 
+
+if (!gameStarted) {
+	return <DottStartPage onStart={handleStart} />
+}
+
 return (
 	<div className="dott">
 	<h1>Dot 🃏</h1>
-	
 	{winner ? (
 		<div className="winner">
 		<h2>🏆 {winner.name} vinner med {winner.total} poäng!</h2>
@@ -100,6 +111,7 @@ return (
 				setPlayers([])
 				setRound(9)
 				setRoundInputs({})
+				setGameStarted(false)  
 			}}>Spela igen</button>
 			</div>
 		) : (
