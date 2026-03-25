@@ -186,6 +186,11 @@ table input {
 	list-style: none;
 	border-radius: 15px;
 	background: linear-gradient(135deg, #0a1628, #1a0a0a);
-
-
+}
+.game-over-buttons{
+	display: flex;
+	flex-direction: row;
+    gap: 1em;
+    justify-content: center;
+    margin-top: 1em;
 }
