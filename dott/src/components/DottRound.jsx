@@ -1,3 +1,36 @@
+// function DottRound ({ players, roundInputs, handleScoreInput, confirmRound}) {
+
+// 	return(
+// 		<div>
+// 			<table>
+// 				<thead>
+// 					<tr>
+// 						<th>Spelare</th>
+// 						<th>Poäng denna runda</th>
+// 						<th>Totalt</th>
+// 					</tr>
+// 				</thead>
+// 				<tbody>
+// 					{players.map((player, index) =>
+// 					<tr key={index}>
+// 						<td>{player.name}</td>
+// 						<td>
+// 							<input type="text"
+// 							inputMode="text"
+// 							value={roundInputs[player.name] || ''}
+// 							onChange={(e) => handleScoreInput(player.name, e.target.value)} />
+// 						</td>
+// 						<td>{player.total}</td>
+// 					</tr>)}
+// 				</tbody>
+// 			</table>
+// 			<button onClick={confirmRound}>Bekräfta runda</button>
+// 		</div>
+// 	)
+// }
+
+// export default DottRound; 
+
 function DottRound ({ players, roundInputs, handleScoreInput, confirmRound}) {
 
 	return(
@@ -11,7 +44,9 @@ function DottRound ({ players, roundInputs, handleScoreInput, confirmRound}) {
 					</tr>
 				</thead>
 				<tbody>
-					{players.map((player, index) =>
+					{[...players]
+					.sort((a, b) => a.total - b.total)
+					.map((player, index) =>
 					<tr key={index}>
 						<td>{player.name}</td>
 						<td>
@@ -29,4 +64,4 @@ function DottRound ({ players, roundInputs, handleScoreInput, confirmRound}) {
 	)
 }
 
-export default DottRound; 
+export default DottRound;

@@ -1,0 +1,29 @@
+.dot-card {
+	background: goldenrod;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	width: 80px;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.pip-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 14px);
+	grid-template-rows: repeat(3, 14px);
+	gap: 6px;
+}
+
+.pip {
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	border: 1px solid black;
+}
+
+.pip.empty {
+	background: transparent;
+	border: none;
+}
